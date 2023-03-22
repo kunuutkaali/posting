@@ -9,11 +9,12 @@ router.get('/', function(req, res, next) {
 
 /* GET Send data form */
 router.get('/send', (req, res, next)=>{
-  res.render('users/send', {data: 'Data'})
+  res.render('users/send')
 })
 /* POST Send data form */
 router.post('/send', (req, res, next)=>{
-  res.render('users/send', {data: res.body})
+  console.log(req.body);
+  res.render('users/send')
 })
 
 module.exports = router;

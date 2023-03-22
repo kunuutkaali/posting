@@ -1,0 +1,12 @@
+extends ../layout.pug
+block content
+    h1 Send Data 
+    form(action="/users/send", method="post") 
+        input(type="text", name='name', value="Kunuut Kaali")
+        input(type="text", name="name", value="Fleischer")
+        input(type="text", name="useremail", value="kunuut@email.com")
+        label(for="prefatom") Atom:
+        input(type="radio", name="prefeditor", value="atom", id="prefatom", required)
+        label(for="prefcode") VS Code:
+        input(type="radio", name="prefeditor", value="code", id="prefcode")
+        input(type="submit", value="Send")
