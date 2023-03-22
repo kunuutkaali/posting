@@ -1,6 +1,10 @@
 extends ../layout.pug
 block content
     h1 Send Data 
+    if locals.data 
+        p='Name: ' + data.name.firstname + ' ' + data.name.lastname
+        p='Email: ' + data.useremail
+        p='Preffered editor: ' + data.prefeditor
     form(action="/users/send", method="post") 
         input(type="text", name='name', value="Kunuut Kaali")
         input(type="text", name="name", value="Fleischer")

@@ -13,7 +13,22 @@ router.get('/send', (req, res, next)=>{
 })
 /* POST Send data form */
 router.post('/send', (req, res, next)=>{
-  console.log(req.body);
+  if(Array.isArray(req.body.name)){
+    console.log('Is iterable');
+  }else{
+    console.log('Not iterable');
+    
+  }
+  
+  // for(let data of req.body){
+  //   if(Array.isArray(data)){
+  //     for(let entry of data){
+  //       posted.push(entry);
+  //     }
+  //   }else{
+  //     posted.push(data);
+  //   }
+  // }
   res.render('users/send')
 })
 
